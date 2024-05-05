@@ -1,21 +1,29 @@
-/*
- * Author: Branden Hernandez
- * Date: 5/23/23
- * Purpose: GUI weekly salary example in Java Programming 7th ed. by Joyce Farrell
- * */
-
+/* Asks user for hourly wage and dependents, then displays weekly salary plus deductions in GUI
+* Author: VaryAble
+* Date: 6/25/2018
+*/
 import javax.swing.JOptionPane;
-public class SalaryDialog {
-    public static void main(String[] args){
-        String wageString, dependentsString;
+public class SalaryDialog
+{
+    public static void main(String[] args)
+    {
+        String wageString, dependentString;
         double wage, weeklyPay;
         int dependents;
         final double HOURS_IN_WEEK = 37.5;
-        wageString = JOptionPane.showInputDialog(null, "Enter employee's hourly wage: ", "Salary dialog 1", JOptionPane.INFORMATION_MESSAGE);
+
+        wageString = JOptionPane.showInputDialog(null,
+                "Enter employee's hourly wage", "Salary dialog 1",
+                JOptionPane.INFORMATION_MESSAGE);
         weeklyPay = Double.parseDouble(wageString) * HOURS_IN_WEEK;
-        dependentsString = JOptionPane.showInputDialog(null, "How many dependents?", "Salary dialog 2", JOptionPane.QUESTION_MESSAGE);
-        dependents = Integer.parseInt(dependentsString);
-        JOptionPane.showMessageDialog(null, "Weekly salary is $" + weeklyPay + "\nDeductions will  be made for " + dependents + " dependents");
+
+        dependentString = JOptionPane.showInputDialog(null,
+                "How many dependents?", "Salary dialog 2",
+                JOptionPane.QUESTION_MESSAGE);
+        dependents = Integer.parseInt(dependentString);
+        JOptionPane.showMessageDialog(null, "Weekly salary is $" +
+        weeklyPay + "\nDeduction will be made for " +
+        dependents + " dependents");
     }
+// Thanks for looking
 }
-//Thanks for looking
